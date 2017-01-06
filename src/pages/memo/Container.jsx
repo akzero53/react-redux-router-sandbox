@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import * as memoActionCreators from 'actions/creators/memo';
-import MemoCreator from 'components/MemoCreator';
-import MemoList from 'components/MemoList';
+import * as memoActionCreators from 'pages/memo/actions/creators/memo';
+import MemoCreator from 'pages/memo/components/MemoCreator';
+import MemoList from 'pages/memo/components/MemoList';
 
 class Application extends React.Component {
   constructor(props) {

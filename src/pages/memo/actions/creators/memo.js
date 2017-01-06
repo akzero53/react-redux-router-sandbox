@@ -1,4 +1,4 @@
-import * as actionTypes from 'actions/types/memo.js';
+import * as actionTypes from 'pages/memo/actions/types/memo.js';
 
 export const createMemo = () => {
   return {

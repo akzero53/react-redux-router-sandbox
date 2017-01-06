@@ -1,4 +1,4 @@
-import * as memoActionTypes from 'actions/types/memo';
+import * as memoActionTypes from 'pages/memo/actions/types/memo';
 
 const initialState = {
   memos: [],

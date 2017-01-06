@@ -2,16 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import Application from 'containers/Application';
-import rootReducer from 'reducers/root';
+import { hashHistory } from 'react-router';
+import { routerMiddleware } from 'react-router-redux';
+import Routes from 'Routes';
+import reducer from 'reducer';
 
-const root = document.getElementById('root');
+const store = createStore(reducer, applyMiddleware(routerMiddleware(hashHistory)));
 
-const store = createStore(rootReducer);
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Application />
-  </Provider>,
-  root
+ReactDOM.render((
+    <Provider store={store}>
+      <Routes store={store} />
+    </Provider>
+  ),
+  document.getElementById('root')
 );
